@@ -30,6 +30,7 @@ function createTweetElement(tweet) {
 // console.log("THIS IS::" + tweet);
 
 function renderTweets(tweets) {
+  $(".tweet-holder").empty();
   for(var tweet of tweets){
     $(".tweet-holder").prepend(createTweetElement(tweet));
 
@@ -84,6 +85,7 @@ $(document).ready(function($){
 //$('.tweet-holder').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 });
+
 
 
 
