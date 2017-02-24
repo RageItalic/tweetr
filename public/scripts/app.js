@@ -20,6 +20,11 @@ function createTweetElement(tweet) {
             <p>${escape(tweet.content.text)}</p>
           </div>
           <footer class="time">
+          <div id="little-images">
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </div>
             <p>${(new Date (tweet.created_at)).toDateString()}</p>
           </footer>
         </article>`
@@ -68,6 +73,8 @@ $(document).ready(function($){
         }).then(() =>{
           //console.log("THIS SHOULD WORK.");
           loadTweets();
+          $('textarea').val('');
+          $('.counter').text(140);
         });
       }
     });

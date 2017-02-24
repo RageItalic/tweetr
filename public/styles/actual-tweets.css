@@ -73,3 +73,8 @@
 .posted-tweet:hover{
   box-shadow: 0px 0px 25px #888888;
 }
+
+#little-images{
+  float: right;
+  margin-top: 10px;
+}
