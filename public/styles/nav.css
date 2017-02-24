@@ -34,7 +34,8 @@
   background-color: #fff;
   width: 93px;
   position: fixed;
-  right: 20%;
+  right: 10%;
+  float: right;
   text-align: left;
   height:45px;
   border-radius: 10px;

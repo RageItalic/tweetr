@@ -14,7 +14,7 @@ function updateCountdown(){
   jQuery(".counter").text(remaining);
   if(remaining < 0){
     jQuery('span').addClass("red-text");
-    alert("WHOA! Idk what to do with all these words... try to keep them below 140");
+    alert("WHOA! Idk what to do with all these words... try to keep them below 140.");
   }
   else{
     jQuery('span').removeClass("red-text");

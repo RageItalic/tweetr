@@ -20,7 +20,7 @@ function createTweetElement(tweet) {
             <p>${escape(tweet.content.text)}</p>
           </div>
           <footer class="time">
-          <div id="little-images">
+          <div class="little-images">
             <i class="fa fa-flag" aria-hidden="true"></i>
             <i class="fa fa-retweet" aria-hidden="true"></i>
             <i class="fa fa-heart" aria-hidden="true"></i>
@@ -62,9 +62,16 @@ $(document).ready(function($){
 
   $( "form" ).on('submit', function( event ) {
         event.preventDefault();
+        console.log()
         if(!$(this).find('textarea').val()){
           alert("At least type something first, stupid!!");
-        }else{
+        }
+        else if($(this).find('textarea').val().length > 140){
+          console.log($(this).find('textarea').val());
+          alert("WHOA! Idk what to do with all these words... try to keep them below 140.");
+        }
+
+        else{
         //var tweetText = text.serialize();
         $.ajax({
           method: 'POST',
@@ -86,6 +93,12 @@ $(document).ready(function($){
 
 
   loadTweets();
+
+
+  $(".logo").click(function(){
+    console.log("hello");
+      window.location.href= "http://www.facebook.com";
+  });
 
 // Test / driver code (temporary)
 // console.log($tweet); // to see what it looks like
