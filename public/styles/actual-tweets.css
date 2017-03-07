@@ -40,14 +40,14 @@
 }
 
 .tweet-text{
-  width: 280px;
   padding-left: 10px;
   height: 80px;
+  word-wrap: break-word;
 }
 
 .tweet-text > p{
   position: relative;
-  padding-top: 22px;
+  padding-top: 5px;
 }
 
 .tweet-text > footer{
@@ -72,4 +72,14 @@
 
 .posted-tweet:hover{
   box-shadow: 0px 0px 25px #888888;
+}
+
+.little-images{
+  display: none;
+  float: right;
+  margin-top: 10px;
+}
+
+.posted-tweet:hover .little-images{
+  display: inline;
 }
